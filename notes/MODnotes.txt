@@ -1,0 +1,44 @@
+ExPRESS.js
+- MORE info on setting up a servr and handling http traffic 
+    - https://nodejs.org/api/http.html
+- SET UP ExPRESS
+    - https://expressjs.com/en/4x/api.html
+- LIST OF PORT NUMBERS
+    - https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers
+- RES object information
+    - https://expressjs.com/en/api.html#res
+- REQUEST RESPONSE HEADERS 
+    - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers
+
+    http://localhost:3001/api/animals
+    http://localhost:3001/api/animals?name=Terry
+
+SETUP
+- RUN
+    npm init -y
+- RUN
+    npm i express 
+
+START SERVER
+- npm start 
+STOP SERVER
+- ctrl+c
+
+PORTS
+- A website is like a college campus
+Address = Host
+building/classroom = Port 
+
+Port 80 used for sites with http://
+Port 443 used for https://
+Ports 1024 and under are special/require permissions
+
+Ports range from 1024 - 49151
+Port 3001 is common practice
+
+
+REQ.PARAMS VS REQ.query
+req.query is multifaceted, often combining multiple parameters, whereas req.param is specific to a single property, often intended to retrieve a single record.
+
+
+
