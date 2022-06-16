@@ -53,3 +53,8 @@ app.get('/api/animals', (req, res) => {
 app.listen(PORT, () => {
     console.log(`API SERVER IS NOW ON PORT ${PORT}! USE heroku open`);
 })
+testThis = () => {
+    console.log("test this");
+}
+
+testThis();
