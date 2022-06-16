@@ -36,6 +36,13 @@ function filterByQuery(query, animalsArray) {
     }
     return filteredResults;
 }
+
+// takes in the id and array of animals and returns single amimal object
+findById = (id, animalsArray) => {
+    const result = animalsArray.filter(animal => animal.id === id)[0];
+    return result;
+}
+
 //ROUTE FOR FRONT END TO REQUEST DATA FROM
 app.get('/api/animals', (req, res) => {
     let results = animals;
@@ -48,7 +55,15 @@ app.get('/api/animals', (req, res) => {
 
     // REMOVED TO CHANGE TO JSON
     //res.send('HELLO THERE')
-
+//rout for animal id
+app.get('/api/animals/:id', (req, res) => {
+    const result = findById(req.params.id, animals);
+    if (result) {
+      res.json(result); 
+    } else {
+        res.send('ERROR: 404! THE REQUESTED RESOURCE COULD NOT BE FOUND. TRY AGAIN IDIOT')
+    }
+})
 // LISTEN FOR REQUESTS
 app.listen(PORT, () => {
     console.log(`API SERVER IS NOW ON PORT ${PORT}! USE heroku open`);
