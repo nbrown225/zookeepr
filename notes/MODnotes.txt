@@ -41,4 +41,7 @@ REQ.PARAMS VS REQ.query
 req.query is multifaceted, often combining multiple parameters, whereas req.param is specific to a single property, often intended to retrieve a single record.
 
 
+POST REQUEST
+-   listens for client sent data
+-   sends data to client
 

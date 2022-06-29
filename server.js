@@ -66,6 +66,7 @@ app.get('/api/animals/:id', (req, res) => {
 })
 
 // store data from user
+// route to accept data, data to be used or stored server side
 app.post('/api/animals', (req, res) => {
     //req.body is where our incoming content will be
     console.log(req.body);
